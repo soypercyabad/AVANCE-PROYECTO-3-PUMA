@@ -26,6 +26,8 @@ jobs:
       user: ${{ secrets.USER }}
       password: ${{ secrets.PASSWORD }}
 
+      version_proyecto: "3.0"
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -58,3 +60,8 @@ jobs:
         run: |
           echo "El usuario es: $user"
           echo "La contraseña es: $password"
+
+      # Crear 4to step
+      - name: variables abiertas
+        run: |
+          echo "La version del proyecto es: $version_proyecto"
