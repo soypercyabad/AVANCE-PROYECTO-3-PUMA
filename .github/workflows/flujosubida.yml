@@ -23,8 +23,8 @@ jobs:
       apellidos: "Molina Abad"
       edad: "25"
 
-      user: "{{ secrets.USER }}"
-      password: "{{ secrets.PASSWORD }}"
+      user: ${{ secrets.USER }}
+      password: ${{ secrets.PASSWORD }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
