@@ -23,6 +23,9 @@ jobs:
       apellidos: "Molina Abad"
       edad: "25"
 
+      user: "{{ secrets.USER }}"
+      password: "{{ secrets.PASSWORD }}"
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -49,3 +52,9 @@ jobs:
       - name: Datos Genrales
         run: |
           echo "carrera de ingeniería de sistemas"
+
+      # Crear 3er step
+      - name: Variables de entorno secretas
+        run: |
+          echo "El usuario es: $user"
+          echo "La contraseña es: $password"
